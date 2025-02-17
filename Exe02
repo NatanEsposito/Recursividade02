@@ -1,0 +1,21 @@
+package rec;
+
+public class Exe02 {
+public static void main(String[]args) {
+	int divd = 14;
+	int divs = 4;
+	
+	int sobra= fazCorre(divd, divs);
+	
+	System.out.println("a sobra eh: "+ sobra);
+}
+
+public static int fazCorre(int divd, int divs) {
+	if(divd<divs) {
+		return divd;
+		
+	}else {
+		return fazCorre(divd-divs, divs);
+	}
+}
+}
