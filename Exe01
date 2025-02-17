@@ -1,0 +1,27 @@
+package rec;
+import java.util.Scanner;
+public class exe01 {
+
+	 public static void main(String[] args) {
+	  int a = 0, b = 0;
+Scanner scanner = new Scanner(System.in);
+	   
+System.out.print("Informe o valor de a: ");
+a = scanner.nextInt();
+
+System.out.print("Informe o valor de b: ");
+b = scanner.nextInt();
+	        
+int resul = result(a,b);
+System.out.println("o resultado eh: " +resul);
+	 }	
+	 
+	public static int result (int a, int b) {
+		if (b==0) {
+			return 0;
+		}else { 
+			return a + result(a, b-1);
+		}
+	}
+}
+
