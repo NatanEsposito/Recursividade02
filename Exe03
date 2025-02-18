@@ -1,0 +1,24 @@
+package rec;
+
+public class Exe03 {
+    public static void main(String[] args) {
+        int vet[] = {3, 4, 7, 18, 4, 3, 7, 9};
+        int tam = vet.length;
+        int pares = contapares(vet, tam, 0);
+        System.out.println("A quantidade de números pares eh: " + pares);
+    }
+
+    public static int contapares(int[] vet, int tam, int ind) {
+        if (ind == tam) {
+        return 0;
+        }
+        
+        int count = 0;
+
+        if (vet[ind] % 2 == 0) {
+            count = 1;
+        }
+        
+        return count + contapares(vet, tam, ind + 1);
+    }
+}
