@@ -1,0 +1,21 @@
+package rec;
+
+public class Exe04 {
+	public static void main(String[] args) {
+        int N = 7; 
+        
+        if (N % 2 != 0 && N > 0) {
+            int resultado = fatDuplo(N);
+            System.out.println("O fatorial duplo de " + N + " é: " + resultado);
+        } else {
+            System.out.println("Por favor, insira um número ímpar positivo.");
+        }
+    }
+	
+	public static int fatDuplo(int N) {
+		 if (N == 1) {
+	            return 1;
+	        }
+	        return N * fatDuplo(N - 2);
+	    }
+	}
